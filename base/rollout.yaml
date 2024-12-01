@@ -12,7 +12,7 @@ spec:
       app: vote
   strategy: 
     blueGreen: 
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
       autoPromotionSeconds: 30
       activeService: vote
       previewService: vote-preview
@@ -23,7 +23,7 @@ spec:
         tier: front
     spec:
       containers:
-      - image: schoolofdevops/vote:v2
+      - image: schoolofdevops/vote:v1
         name: vote
         imagePullPolicy: Always
         resources: 
