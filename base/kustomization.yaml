@@ -4,6 +4,6 @@ resources:
 - rollout.yaml
 - service.yaml
 - preview-service.yaml
-- rollout.yaml 
+- rollout1.yaml 
 - service1.yaml
 - preview-service1.yaml  
