@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  labels:
+    app: vote1
+    tier: front
+  name: vote1
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      app: vote1
+  strategy: 
+    blueGreen: 
+      autoPromotionEnabled: true
+      autoPromotionSeconds: 30
+      activeService: vote1
+      previewService: vote1-preview
+  template:
+    metadata:
+      labels:
+        app: vote1
+        tier: front
+    spec:
+      containers:
+      - image: schoolofdevops/vote:v5
+        name: vote1
+        imagePullPolicy: Always
+        resources: 
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits: 
+            cpu: "250m"
+            memory: "128Mi"
+

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    supported-by: sre@example.com
+  creationTimestamp: null
+  labels:
+    app: vote1
+    project: instavote
+    tier: front
+  name: vote1-preview
+spec:
+  ports:
+  - name: "80"
+    nodePort: 30500
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: vote1
+  type: NodePort
