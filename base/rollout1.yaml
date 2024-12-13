@@ -15,7 +15,7 @@ spec:
       autoPromotionEnabled: true
       autoPromotionSeconds: 30
       activeService: vote1
-      previewService: vote1-preview
+      previewService: vote-preview1
   template:
     metadata:
       labels:

@@ -8,7 +8,7 @@ metadata:
     app: vote1
     project: instavote
     tier: front
-  name: vote1-preview
+  name: vote-preview1
 spec:
   ports:
   - name: "80"
