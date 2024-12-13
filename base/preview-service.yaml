@@ -9,7 +9,6 @@ metadata:
     project: instavote
     tier: front
   name: vote-preview
-  namespace: staging
 spec:
   ports:
   - name: "80"
